@@ -503,104 +503,334 @@
         // Data soal
         const questions = [
             {
-                question: "Apa yang dimaksud dengan Kecerdasan Artifisial (AI)?",
+                question: "Langkah pertama dalam berpikir komputasional adalah…",
                 options: [
-                    "Sistem komputer yang dapat meniru kecerdasan manusia",
-                    "Program untuk bermain game",
-                    "Jaringan komputer global",
-                    "Bahasa pemrograman"
+                    "Algoritma",
+                    "Pola",
+                    "Abstraksi",
+                    "Decomposition (dekomposisi)",
+                    "Evaluasi"
                 ],
-                correctAnswer: 0
+                correct: 3
             },
             {
-                question: "Manakah yang bukan termasuk bahasa pemrograman?",
+                question: "Kemampuan menemukan kesamaan pada beberapa masalah disebut…",
                 options: [
-                    "Python",
-                    "JavaScript",
-                    "HTML",
-                    "Photoshop"
+                    "Abstraksi",
+                    "Pengenalan pola",
+                    "Evaluasi",
+                    "Algoritma",
+                    "Debugging"
                 ],
-                correctAnswer: 3
+                correct: 1
             },
             {
-                question: "Apa fungsi dari algoritma dalam pemrograman?",
+                question: "Abstraksi dalam berpikir komputasional berarti…",
                 options: [
-                    "Menghias tampilan program",
-                    "Langkah-langkah untuk menyelesaikan masalah",
-                    "Menghubungkan ke internet",
-                    "Menyimpan data"
+                    "Menghapus seluruh informasi",
+                    "Menyederhanakan masalah dengan fokus pada hal penting",
+                    "Mencari pola tersembunyi",
+                    "Membuat solusi otomatis",
+                    "Menulis kode program"
                 ],
-                correctAnswer: 1
+                correct: 1
             },
             {
-                question: "Apa kepanjangan dari CPU?",
+                question: "Algoritma adalah…",
                 options: [
-                    "Computer Processing Unit",
-                    "Central Processing Unit",
-                    "Core Program Utility",
-                    "Central Program Unit"
-                ],
-                correctAnswer: 1
-            },
-            {
-                question: "Manakah yang merupakan contoh machine learning?",
-                options: [
-                    "Microsoft Word",
-                    "Rekomendasi film di Netflix",
-                    "Kalkulator",
-                    "Paint"
-                ],
-                correctAnswer: 1
-            },
-            {
-                question: "Apa yang dimaksud dengan variabel dalam pemrograman?",
-                options: [
-                    "Tempat menyimpan data yang nilainya dapat berubah",
-                    "Jenis printer",
-                    "Sistem operasi",
-                    "Perangkat keras komputer"
-                ],
-                correctAnswer: 0
-            },
-            {
-                question: "Apa fungsi dari Git dalam pengembangan software?",
-                options: [
-                    "Membuat desain grafis",
-                    "Sistem kontrol versi",
+                    "Hasil akhir program",
                     "Bahasa pemrograman",
-                    "Database"
+                    "Urutan langkah-langkah sistematis untuk menyelesaikan masalah",
+                    "Kesalahan dalam program",
+                    "Bentuk debugging"
                 ],
-                correctAnswer: 1
+                correct: 2
             },
             {
-                question: "Apa yang dimaksud dengan 'debugging'?",
+                question: "Contoh dekomposisi adalah…",
                 options: [
-                    "Membuat program baru",
-                    "Mencari dan memperbaiki kesalahan dalam kode",
+                    "Mengulang langkah hingga selesai",
+                    "Memecah masalah besar menjadi beberapa bagian kecil",
+                    "Menghapus bagian tidak penting",
+                    "Mencari kesamaan antar data",
+                    "Menyusun kode tanpa perencanaan"
+                ],
+                correct: 1
+            },
+            {
+                question: "Ketika siswa melakukan pengecekan ulang langkah-langkah solusi, ia sedang melakukan…",
+                options: [
+                    "Abstraksi",
+                    "Evaluasi",
+                    "Simulasi",
+                    "Analisis data",
+                    "Pengkodean"
+                ],
+                correct: 1
+            },
+            {
+                question: "Berikut contoh penggunaan pola dalam kehidupan sehari-hari…",
+                options: [
+                    "Menyusun jadwal piket",
+                    "Menyusun langkah memasak",
+                    "Menyelesaikan soal matematika",
+                    "Mengenali jam sibuk berdasarkan hari sebelumnya",
+                    "Menulis program"
+                ],
+                correct: 3
+            },
+            {
+                question: "Dalam algoritma, \"percabangan\" berarti…",
+                options: [
+                    "Mengulang langkah",
+                    "Menghapus data",
+                    "Memilih aksi berdasarkan kondisi tertentu",
+                    "Menggabungkan data",
+                    "Mengurutkan data otomatis"
+                ],
+                correct: 2
+            },
+            {
+                question: "Debugging bertujuan untuk…",
+                options: [
+                    "Membuat pola baru",
+                    "Menjalankan program lebih cepat",
+                    "Mencari dan memperbaiki kesalahan",
+                    "Menghapus keseluruhan program",
+                    "Menambah fitur baru"
+                ],
+                correct: 2
+            },
+            {
+                question: "Contoh algoritma paling sederhana adalah…",
+                options: [
+                    "Membuat daftar belanja",
+                    "Langkah-langkah membuat mie instan",
+                    "Membaca buku",
+                    "Browsing internet",
+                    "Mendengarkan musik"
+                ],
+                correct: 1
+            },
+            {
+                question: "Etika AI yang baik harus memperhatikan…",
+                options: [
+                    "Hak cipta manusia saja",
+                    "Kepentingan produsen teknologi",
+                    "Keamanan, privasi, dan keadilan",
+                    "Kecepatan komputasi",
+                    "Jumlah data yang digunakan"
+                ],
+                correct: 2
+            },
+            {
+                question: "Penggunaan data pribadi tanpa izin melanggar prinsip…",
+                options: [
+                    "Efisiensi",
+                    "Privasi",
+                    "Optimasi",
+                    "Kecepatan",
+                    "Akurasi"
+                ],
+                correct: 1
+            },
+            {
+                question: "Bias dalam AI dapat terjadi ketika…",
+                options: [
+                    "Data terlalu banyak",
+                    "Model bekerja terlalu cepat",
+                    "Data pelatihan tidak seimbang",
+                    "Jaringan internet lambat",
+                    "Komputer tidak kuat"
+                ],
+                correct: 2
+            },
+            {
+                question: "Contoh penggunaan AI yang etis adalah…",
+                options: [
+                    "Menggunakan foto orang tanpa izin untuk pelatihan",
+                    "Menggunakan deepfake untuk menipu",
+                    "Memakai AI untuk membantu tunanetra membaca teks",
+                    "Memata-matai teman dengan kamera",
+                    "Menyebarkan informasi palsu"
+                ],
+                correct: 2
+            },
+            {
+                question: "Transparansi AI berarti…",
+                options: [
+                    "AI harus selalu gratis",
+                    "Pengguna mengetahui cara kerja dan batasan AI",
+                    "AI dapat digunakan tanpa aturan",
+                    "AI bekerja tanpa campur tangan manusia",
+                    "AI harus disimpan secara rahasia"
+                ],
+                correct: 1
+            },
+            {
+                question: "Salah satu risiko AI generatif adalah…",
+                options: [
+                    "Dapat membuat listrik padam",
+                    "Memproduksi informasi palsu (misinformasi)",
+                    "Membuat komputer semakin lambat",
+                    "Menghilangkan semua pekerjaan",
+                    "Mengurangi kapasitas memori"
+                ],
+                correct: 1
+            },
+            {
+                question: "Prinsip fairness (keadilan) dalam AI berarti…",
+                options: [
+                    "Semua data harus dihapus",
+                    "AI tidak boleh memihak kelompok tertentu",
+                    "AI harus bekerja lebih cepat untuk semua orang",
+                    "AI tidak perlu diuji",
+                    "AI harus selalu online"
+                ],
+                correct: 1
+            },
+            {
+                question: "AI tidak boleh digunakan untuk…",
+                options: [
+                    "Mendeteksi penyakit",
+                    "Mendukung pembelajaran",
+                    "Menyebarkan ujaran kebencian",
+                    "Membantu navigasi perjalanan",
+                    "Membaca tanda jalan"
+                ],
+                correct: 2
+            },
+            {
+                question: "Contoh pelanggaran etika digital adalah…",
+                options: [
+                    "Mengutip sumber dengan benar",
+                    "Menyimpan file pribadi dengan aman",
+                    "Menggunakan aplikasi bajakan",
+                    "Menjaga password",
+                    "Memperbarui antivirus"
+                ],
+                correct: 2
+            },
+            {
+                question: "AI yang aman harus…",
+                options: [
+                    "Sulit digunakan",
+                    "Tidak memiliki panduan",
+                    "Mengurangi risiko penyalahgunaan",
+                    "Menyembunyikan seluruh fitur",
+                    "Hanya dibuat untuk hiburan"
+                ],
+                correct: 2
+            },
+            {
+                question: "AI adalah…",
+                options: [
+                    "Komputer yang bisa hidup",
+                    "Teknologi yang membuat mesin mampu meniru kecerdasan manusia",
+                    "Robot yang bisa berbicara",
+                    "Program untuk bermain game",
+                    "Mesin pencari internet"
+                ],
+                correct: 1
+            },
+            {
+                question: "Contoh sederhana AI yang sering digunakan adalah…",
+                options: [
+                    "Foto kertas",
+                    "Lampu pijar",
+                    "Asisten virtual seperti Google Assistant",
+                    "Kalender meja",
+                    "Penghapus pensil"
+                ],
+                correct: 2
+            },
+            {
+                question: "Machine Learning adalah…",
+                options: [
+                    "Cara komputer beristirahat",
+                    "Belajar tanpa data",
+                    "Proses komputer belajar dari data",
+                    "Proses komputer tidur",
+                    "Penghapusan data"
+                ],
+                correct: 2
+            },
+            {
+                question: "Contoh implementasi AI di sekolah adalah…",
+                options: [
+                    "Meja pintar",
+                    "Sistem absensi wajah",
+                    "Penghapus papan",
+                    "Stop kontak listrik",
+                    "Tangga darurat"
+                ],
+                correct: 1
+            },
+            {
+                question: "Computer Vision berfokus pada…",
+                options: [
+                    "Suara",
+                    "Gerakan angin",
+                    "Kemampuan komputer memahami gambar dan video",
+                    "Mendeteksi bau",
+                    "Memperkuat sinyal internet"
+                ],
+                correct: 2
+            },
+            {
+                question: "Natural Language Processing (NLP) digunakan untuk…",
+                options: [
+                    "Menggambar 3D",
+                    "Mengubah suara menjadi teks",
+                    "Mengukur suhu ruangan",
+                    "Memperbaiki hardware",
+                    "Menyusun kabel jaringan"
+                ],
+                correct: 1
+            },
+            {
+                question: "Chatbot adalah…",
+                options: [
+                    "Robot fisik",
+                    "Program yang dapat berkomunikasi menggunakan teks atau suara",
+                    "Mesin untuk menggambar",
+                    "Sistem pengendali drone",
+                    "Alat musik digital"
+                ],
+                correct: 1
+            },
+            {
+                question: "Data training digunakan untuk…",
+                options: [
                     "Menghapus program",
-                    "Menginstal software"
+                    "Menguji komputer",
+                    "Mengajarkan AI cara membuat keputusan",
+                    "Menyimpan file pribadi",
+                    "Mempercepat internet"
                 ],
-                correctAnswer: 1
+                correct: 2
             },
             {
-                question: "Apa kepanjangan dari HTML?",
+                question: "Deep Learning berbeda dari Machine Learning karena…",
                 options: [
-                    "Hyper Text Markup Language",
-                    "High Tech Modern Language",
-                    "Home Tool Markup Language",
-                    "Hyperlink and Text Markup Language"
+                    "Tidak membutuhkan data",
+                    "Menggunakan jaringan saraf tiruan berlapis-lapis",
+                    "Berjalan tanpa listrik",
+                    "Hanya digunakan pada robot",
+                    "Menghapus data secara otomatis"
                 ],
-                correctAnswer: 0
+                correct: 1
             },
             {
-                question: "Apa yang dimaksud dengan 'cloud computing'?",
+                question: "AI dapat membantu manusia dalam…",
                 options: [
-                    "Komputasi menggunakan awan cuaca",
-                    "Penyimpanan dan pengolahan data di internet",
-                    "Jenis komputer portabel",
-                    "Sistem operasi"
+                    "Menyebarkan hoaks",
+                    "Membuat konflik",
+                    "Menyelesaikan tugas yang berulang dan berat",
+                    "Menghack data pribadi",
+                    "Mengurangi keamanan"
                 ],
-                correctAnswer: 1
+                correct: 2
             }
         ];
         
@@ -958,3 +1188,4 @@
 </body>
 
 </html>
+
