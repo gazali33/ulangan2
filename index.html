@@ -90,6 +90,28 @@
             box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
         }
         
+        /* Tambahkan styling untuk form-select */
+        .form-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            background-color: white;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+            background-position: right 12px center;
+            background-repeat: no-repeat;
+            background-size: 16px;
+            appearance: none;
+            transition: border-color 0.3s;
+        }
+        
+        .form-select:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
         .btn {
             display: inline-block;
             padding: 12px 24px;
@@ -386,7 +408,17 @@
                 
                 <div class="form-group">
                     <label for="studentClass">Kelas</label>
-                    <input type="text" id="studentClass" class="form-control" placeholder="Masukkan kelas" required>
+                    <select class="form-select" id="studentClass" required>
+                        <option value="">Pilih Kelas</option>
+                        <option value="X DPIB">X DPIB</option>
+                        <option value="X TO 1">X TO 1</option>
+                        <option value="X TO 2">X TO 2</option>
+                        <option value="X TO 3">X TO 3</option>
+                        <option value="X TO 4">X TO 4</option>
+                        <option value="X TO 5">X TO 5</option>
+                        <option value="X TO 6">X TO 6</option>
+                        <option value="X TO 7">X TO 7</option>
+                    </select>
                 </div>
                 
                 <button type="submit" class="btn btn-block">Akses Soal</button>
@@ -634,7 +666,7 @@
             const token = tokenInput.value.trim();
             const studentName = studentNameInput.value.trim();
             const studentNis = studentNisInput.value.trim();
-            const studentClass = studentClassInput.value.trim();
+            const studentClass = studentClassInput.value;
             
             if (!validateToken(token)) {
                 showNotification('Token tidak valid. Silakan coba lagi.', 'error');
@@ -858,28 +890,28 @@
 				score: score,
 				token: tokenInput.value.trim(),
 				timestamp: new Date().toISOString()
-		};
-    
+			};
+			
 			console.log('Menyimpan data ke Google Sheets:', data);
-    
-		// Ganti URL dengan URL Web App Anda
+			
+			// Ganti URL dengan URL Web App Anda
 			const webAppUrl = 'https://script.google.com/macros/s/AKfycbxLAe30pJPq2kdqyl-achYp9QqtG2gst0-SmG7Q7HuYPxLsDFa98TQA_DaxqcDsPwsb/exec';
-    
+			
 			try {
-			const response = await fetch(webAppUrl, {
-				method: 'POST',
-				mode: 'no-cors', // Diperlukan karena CORS policy
-				cache: 'no-cache',
-				headers: {
-					'Content-Type': 'application/json',
-				},
-				body: JSON.stringify(data)
-        });
-        
+				const response = await fetch(webAppUrl, {
+					method: 'POST',
+					mode: 'no-cors', // Diperlukan karena CORS policy
+					cache: 'no-cache',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify(data)
+				});
+				
 				showNotification('Data telah disimpan ke Google Sheets');
-		} catch (error) {
-			console.error('Error saving to Google Sheets:', error);
-			showNotification('Gagal menyimpan data ke Google Sheets', 'error');
+			} catch (error) {
+				console.error('Error saving to Google Sheets:', error);
+				showNotification('Gagal menyimpan data ke Google Sheets', 'error');
 			}
 		}
         
